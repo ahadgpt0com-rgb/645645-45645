@@ -1,0 +1,6 @@
+{
+  "name": "Precision Video & Audio Trimmer",
+  "description": "Fast, privacy-first web-based media trimmer with waveform audio visualization, multi-clip queue, frame-level precision scrubbing, and client-side browser export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

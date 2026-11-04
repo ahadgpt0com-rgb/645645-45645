@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precision Video & Audio Trimmer</title>
+    <meta name="description" content="Fast, privacy-first web-based media trimmer with waveform audio visualization, multi-clip queue, frame-level precision scrubbing, and client-side browser export." />
+    <meta property="og:title" content="Precision Video & Audio Trimmer" />
+    <meta property="og:description" content="Fast, privacy-first web-based media trimmer with waveform audio visualization, multi-clip queue, frame-level precision scrubbing, and client-side browser export." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch ? window.fetch.bind(window) : null;
+          var currentFetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return currentFetch;
+            },
+            set: function(newFetch) {
+              currentFetch = newFetch;
+            }
+          });
+        } catch (e) {
+          // Gracefully continue
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
